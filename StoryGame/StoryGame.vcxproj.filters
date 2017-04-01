@@ -24,6 +24,9 @@
     <ClCompile Include="src\resource\manager\impl\GameManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\resource\graphics\impl\GraphicsWindowGL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\resource\ResourceLocator.h">
@@ -57,6 +60,21 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\resource\graphics\impl\GraphicsWindowGL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\resource\graphics\IGraphicsSettings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\generic\data\byte.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\resource\graphics\impl\GraphicsSettingsGL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\resource\graphics\IGraphics2D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\resource\graphics\impl\Graphics2DGL.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

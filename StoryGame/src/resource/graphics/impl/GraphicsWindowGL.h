@@ -1,8 +1,10 @@
 #pragma once
 
+#include <thread>
 #include <GLFW/glfw3.h>
 #include "../IGraphicsWindow.h"
 
+// TODO: Find a solution to get these into the class.
 void(*pressCallback)(int) = nullptr;
 void(*releaseCallback)(int) = nullptr;
 void keyHandler(GLFWwindow* window, int key, int scancode, int action, int mods) {
@@ -16,6 +18,10 @@ void keyHandler(GLFWwindow* window, int key, int scancode, int action, int mods)
 		}
 	}
 }
+
+// TODO: Friend function??????
+class GraphicsWindowGL;
+void loop(GraphicsWindowGL *window);
 
 class GraphicsWindowGL : public IGraphicsWindow {
 	public:
@@ -57,13 +63,19 @@ class GraphicsWindowGL : public IGraphicsWindow {
 		releaseCallback = callback;
 	}
 
-
 	void startLoop() {
+		//TODO: Get threading to work.
+		//loopThread = new thread(loop, this);
+		_loop();
+	}
+
+	void _loop() {
 		glfwSetKeyCallback(window, keyHandler);
 
 		while (!glfwWindowShouldClose(window)) {
 			glfwPollEvents();
 
+			glfwMakeContextCurrent(window);
 			if (tickCallback != nullptr) {
 				tickCallback();
 			}
@@ -72,7 +84,12 @@ class GraphicsWindowGL : public IGraphicsWindow {
 		}
 	}
 
-	private:
+	private:	
 	GLFWwindow *window;
-	void(*tickCallback)(void);	
+	void(*tickCallback)(void);
+	thread *loopThread;
 };
+
+void loop(GraphicsWindowGL *window) {
+	window->_loop();
+}

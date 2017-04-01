@@ -82,7 +82,7 @@
     <Link>
       <AdditionalLibraryDirectories>
       </AdditionalLibraryDirectories>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);opengl32.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -119,12 +119,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\resource\graphics\impl\GraphicsWindowGL.cpp" />
     <ClCompile Include="src\resource\manager\impl\GameManager.cpp" />
     <ClCompile Include="src\resource\ResourceLocator.cpp" />
     <ClCompile Include="src\storygame\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\generic\data\byte.h" />
+    <ClInclude Include="src\resource\graphics\IGraphics2D.h" />
+    <ClInclude Include="src\resource\graphics\IGraphicsSettings.h" />
     <ClInclude Include="src\resource\graphics\IGraphicsWindow.h" />
+    <ClInclude Include="src\resource\graphics\impl\Graphics2DGL.h" />
+    <ClInclude Include="src\resource\graphics\impl\GraphicsSettingsGL.h" />
     <ClInclude Include="src\resource\graphics\impl\GraphicsWindowGL.h" />
     <ClInclude Include="src\resource\manager\IManager.h" />
     <ClInclude Include="src\resource\manager\impl\GameManager.h" />
