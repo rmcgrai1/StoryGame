@@ -2,6 +2,7 @@
 
 #include "graphics/IGraphics.h"
 #include "log/ILog.h"
+#include "manager/IManager.h"
 
 class ResourceLocator {
 	public:
@@ -13,6 +14,8 @@ class ResourceLocator {
 	void setLog(ILog*);
 	ILog* getLog();
 
+	void setManager(IManager*);
+	IManager* getManager();
 
 	private:
 	static ResourceLocator* instance;
@@ -24,4 +27,7 @@ class ResourceLocator {
 	ILog
 		*NULL_LOG = new NullLog(),
 		*log = NULL_LOG;
+	IManager
+		*NULL_MANAGER = new NullManager(),
+		*manager = NULL_MANAGER;
 };
