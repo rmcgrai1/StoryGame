@@ -6,7 +6,7 @@
 #include "minigame\Tetris.h"
 
 IGraphicsWindow *mainWindow;
-Tetris *tetris = new Tetris();
+Tetris *tetris;
 
 byte pixels[640 * 480 * 4];
 
@@ -57,6 +57,8 @@ void pressFunction(int key) {
 	if (key == GLFW_KEY_ESCAPE) {
 		mainWindow->close();
 	}
+
+	tetris->control(key);
 }
 
 void releaseFunction(int key) {
@@ -78,6 +80,8 @@ int main(int argc, char **argv) {
 	// Initialize Manager.
 	IManager *m = new GameManager();
 	rl->setManager(m);
+
+	tetris = new Tetris();
 
 	// Start.
 	g->init();
