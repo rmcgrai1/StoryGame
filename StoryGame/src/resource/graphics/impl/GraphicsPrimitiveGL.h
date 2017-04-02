@@ -21,7 +21,7 @@ class GraphicsPrimitiveGL : public IGraphicsPrimitive {
 	}
 
 	void color4b(byte r, byte g, byte b, byte a) {
-		glColor4b(r, g, b, a);
+		glColor4ub(r, g, b, a);
 	}
 
 	void color4d(double r, double g, double b, double a) {

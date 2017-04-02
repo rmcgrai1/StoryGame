@@ -22,6 +22,9 @@ class GraphicsGL : public IGraphics {
 		ResourceLocator::get()->getLog()->println("Initialized!");
 
 		glfwInit();
+
+		glEnable(GL_DEPTH_TEST);
+		glDepthFunc(GL_LEQUAL);
 	};
 
 	IGraphicsWindow* createGraphicsWindow() {

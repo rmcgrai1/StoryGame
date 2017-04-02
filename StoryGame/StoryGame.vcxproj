@@ -126,6 +126,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\generic\data\byte.h" />
+    <ClInclude Include="src\generic\math\Mandelbrot.h" />
     <ClInclude Include="src\resource\graphics\IGraphics2D.h" />
     <ClInclude Include="src\resource\graphics\IGraphicsSettings.h" />
     <ClInclude Include="src\resource\graphics\IGraphicsWindow.h" />
@@ -141,6 +142,7 @@
     <ClInclude Include="src\resource\log\impl\ConsoleLog.h" />
     <ClInclude Include="src\resource\log\ILog.h" />
     <ClInclude Include="src\resource\ResourceLocator.h" />
+    <ClInclude Include="src\storygame\minigame\Tetris.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
