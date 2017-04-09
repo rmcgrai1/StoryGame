@@ -83,6 +83,21 @@
     <ClInclude Include="src\storygame\minigame\Tetris.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\resource\controller\IButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\resource\controller\IMouse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\resource\controller\IWheel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\resource\controller\IAnalogStick.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\resource\controller\IAnalogButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -12,6 +12,8 @@ class IGraphicsWindow {
 	virtual void setTickFunc(void(*callback)(void)) = 0;
 	virtual void startLoop() = 0;
 
+	virtual int getFPS() = 0;
+
 	virtual void show() = 0;
 	virtual void hide() = 0;
 	virtual void close() = 0;

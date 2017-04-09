@@ -127,6 +127,11 @@
   <ItemGroup>
     <ClInclude Include="src\generic\data\byte.h" />
     <ClInclude Include="src\generic\math\Mandelbrot.h" />
+    <ClInclude Include="src\resource\controller\IAnalogButton.h" />
+    <ClInclude Include="src\resource\controller\IAnalogStick.h" />
+    <ClInclude Include="src\resource\controller\IButton.h" />
+    <ClInclude Include="src\resource\controller\IMouse.h" />
+    <ClInclude Include="src\resource\controller\IWheel.h" />
     <ClInclude Include="src\resource\graphics\IGraphics2D.h" />
     <ClInclude Include="src\resource\graphics\IGraphicsSettings.h" />
     <ClInclude Include="src\resource\graphics\IGraphicsWindow.h" />
